@@ -3,21 +3,10 @@ import { useState } from "react";
 import { BrowserRouter } from "react-router-dom"
 import MainContent from './Component/Home/MainContent'
 import MainNav from './Component/Home/MainNav'
+import RightSide from './Component/Home/RightSide'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
-// const App = () =>{
-//     return (
-//         <ChatEngine
-//             height="100vh"
-//             projectID="1b1e1678-8e7e-4e2f-bc89-b72480e6c015"
-//             userName="phuocdh"
-//             userSecret="huuphuoc97it"
-//         />
-//     );
-// }
-
-// export default App;
 
 export default function App(){
     const [sideNavDisplay, setSideNavDisplay] = useState(true);
@@ -31,9 +20,19 @@ export default function App(){
         <BrowserRouter>
             <div className="main-container">
                 <MainNav menuHandler={toggleSiveNav} />
-                <div className="bottom-wrapper">
+                <div className="top-warapper child child-top">
+                        {/* <div className="mb-2">
+                            <a href="/" role="button" className="main-page">Trang chủ</a>
+                        </div> */}
+                    <h2><a href="/">Trang chủ</a></h2>
+                </div>
+                <div className="bottom-wrapper child child-middle">
                     <MainContent/>
                 </div>
+                <div className="bottom-wrapper child child-bottom">
+                    Footer
+                </div>
+                <RightSide/>
             </div>
         </BrowserRouter>
     )

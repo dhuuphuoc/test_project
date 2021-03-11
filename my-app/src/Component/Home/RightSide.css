@@ -1,7 +1,5 @@
-.main-nav {
+.right-side{
     border:1px solid #e9ecef;
-    position: fixed;
-    width: 30%;
     height: 100%;
     z-index: 1;
     white-space:nowrap;
@@ -10,12 +8,12 @@
     box-sizing: border-box;
 }
 
-.main-nav a {
+.right-side     a {
     display: inline-block;
     text-decoration: none;
     color: white;
     align-items: center;
-    margin-left: 30%;
+    margin: auto;
     box-sizing: border-box;
     padding: 10px 15px;
     vertical-align: middle;
