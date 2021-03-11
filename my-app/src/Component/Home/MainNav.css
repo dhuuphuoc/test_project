@@ -1,0 +1,32 @@
+.main-nav {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    white-space:nowrap;
+    background-color: #5aaeee;
+    box-sizing: border-box;
+}
+
+nav ul{
+	display: inline-block;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+nav ul li{
+	display: inline-block;
+}
+
+.main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    margin: auto;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    vertical-align: middle;
+  }
