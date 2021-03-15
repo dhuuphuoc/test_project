@@ -1,7 +1,9 @@
+import { Col } from "react-bootstrap";
+
 export default function Home(){
     return(
-        <div className="Home">
+        <Col xs="4" className="Home">
             <p>Home Page</p>
-        </div>
+        </Col>
     )
 }

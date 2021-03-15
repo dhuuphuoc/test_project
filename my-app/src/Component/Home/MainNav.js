@@ -1,14 +1,21 @@
 import React from 'react'
 import './MainNav.css'
-import { Button } from 'react-bootstrap';
+import { Button, Row } from 'react-bootstrap';
 import twitter from '../twitter.png'
 
 export default function MainNav({ menuHandler }) {
     return (
-        <div className="main-nav child child-left">
-              <div className="mb-2">
-                <a href="/" role="button"><img src={twitter} alt="Logo" width="30%" height="30%"/></a>
+        <Row className="nav-bar">
+            <div className="row logo">
+                <a href="/home"><img src={twitter} alt="Logo"/></a>
             </div>
-        </div>
+            <div className="row tweet">
+                <a href="/tweet">
+                    <Button variant="primary" size="lg">
+                    Tweet
+                    </Button>
+                </a>
+            </div>
+        </Row>
     )
 }

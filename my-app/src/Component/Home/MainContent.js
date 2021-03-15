@@ -3,13 +3,12 @@ import Tweet from '../Tweet/Tweet'
 import Home from './Home'
 
 export default function MainContent() {
-    let match = useRouteMatch();
     return(
         <Switch>
             <Route path="/tweet">
                 <Tweet/>
             </Route>
-            <Route path="/">
+            <Route path="/home">
                 <Home/>
             </Route>
         </Switch>

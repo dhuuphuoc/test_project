@@ -5,7 +5,7 @@ import MainContent from './Component/Home/MainContent'
 import MainNav from './Component/Home/MainNav'
 import RightSide from './Component/Home/RightSide'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import {Row, Container, Col} from 'react-bootstrap'
 import './App.css';
 
 export default function App(){
@@ -18,22 +18,20 @@ export default function App(){
 
     return(
         <BrowserRouter>
-            <div className="main-container">
-                <MainNav menuHandler={toggleSiveNav} />
-                <div className="top-warapper child child-top">
-                        {/* <div className="mb-2">
-                            <a href="/" role="button" className="main-page">Trang chủ</a>
-                        </div> */}
-                    <h2><a href="/">Trang chủ</a></h2>
-                </div>
-                <div className="bottom-wrapper child child-middle">
-                    <MainContent/>
-                </div>
-                <div className="bottom-wrapper child child-bottom">
-                    Footer
-                </div>
-                <RightSide/>
-            </div>
+            <Container>
+                <Row>
+                    <Col xs lg="4">
+                        <MainNav menuHandler={toggleSiveNav} />
+                    </Col>
+                    <Col xs lg="4">
+                        <Row><h2><a href="/">Trang chủ</a></h2></Row>
+                        <MainContent/>
+                    </Col>
+                    <Col xs lg="4">
+                        <RightSide/>
+                    </Col>
+                </Row>
+            </Container>
         </BrowserRouter>
     )
 }
